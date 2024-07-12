@@ -39,9 +39,9 @@ export function Navbar() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
           <MountainIcon className="h-6 w-6" />
-          <span className="font-semibold">Acme Shop</span>
+          <span className="font-semibold hidden md:block">Acme Shop</span>
         </Link>
-        <div className="relative hidden md:flex flex-1 md:max-w-md ps-4" ref={searchRef}>
+        <div className="relative flex flex-1 md:max-w-md ps-4" ref={searchRef}>
           <div className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"

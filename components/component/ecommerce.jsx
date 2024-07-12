@@ -32,6 +32,7 @@ import { Navbar } from "./navbar"
 import { Hero } from "./hero"
 import {products, testimonials} from "./data"
 import Footer from "./footer"
+import { ShoppingCard } from "./shopping-card"
 
 export function Ecommerce() {
   const [selectedCategory, setSelectedCategory] = useState("All")
@@ -105,24 +106,25 @@ export function Ecommerce() {
             <div
               className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
               {filteredProducts.map((product) => (
-                <Card key={product.id} className="group duration-300 hover:shadow-md relative overflow-hidden">
-                  <div className="w-fit h-fit overflow-hidden">
-                    <img
-                      src={product.image}
-                      width={400}
-                      height={300}
-                      alt={product.title}
-                      className="rounded-t-lg object-cover aspect-square bg-[white] group-hover:scale-110 duration-500" />
-                  </div>
-                  <CardContent>
-                    <h3 className="text-xl font-bold text-primary pt-5">{product.title}</h3>
-                    <p className="mt-2 text-muted-foreground">{product.description}</p>
-                      <Button className="mt-4 bg-[#de772d]" size="sm">
-                      Buy Now
-                    </Button>
-                  </CardContent>
-                  <div className="absolute -top-40" id={product.id}></div>
-                </Card>
+                // <Card key={product.id} className="group duration-300 hover:shadow-md relative overflow-hidden">
+                //   <div className="w-fit h-fit overflow-hidden">
+                //     <img
+                //       src={product.image}
+                //       width={400}
+                //       height={300}
+                //       alt={product.title}
+                //       className="rounded-t-lg object-cover aspect-square bg-[white] group-hover:scale-110 duration-500" />
+                //   </div>
+                //   <CardContent className="flex flex-col justify-end">
+                //     <h3 className="text-xl font-bold text-primary pt-5">{product.title}</h3>
+                //     <p className="mt-2 text-muted-foreground">{product.description}</p>
+                //       <Button className="mt-4 bg-[#de772d]" size="sm">
+                //       Buy Now
+                //     </Button>
+                //   </CardContent>
+                //   <div className="absolute -top-40" id={product.id}></div>
+                // </Card>
+                <ShoppingCard id={product.id} image={product.image} name={product.title} description={product.description} category={product.category} />
               ))}
             </div>
           </div>
