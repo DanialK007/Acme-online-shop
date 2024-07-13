@@ -1,40 +1,23 @@
-// "use client";
-import { Ecommerce } from "@/components/component/ecommerce";
-// import Lenis from "@studio-freight/lenis";
-// import { useEffect, useRef } from "react";
+import React from 'react'
 
-export default function Home() {
-  // const lenisRef = useRef(null);
+import { Ecommerce } from '@/components/component/ecommerce'
+import { Navbar } from '@/components/component/navbar'
+import { Hero } from '@/components/component/hero'
+import Footer from '@/components/component/footer'
+import Customer from '@/components/component/Customer'
+import Featured from '@/components/component/Featured'
 
-  // useEffect(() => {
-  //   // Initialize Lenis with the desired settings
-  //   const lenis = new Lenis({
-  //     duration: 1.5, // Increase duration for smoother scroll
-  //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Ease out exponential
-  //     smoothWheel: true,
-  //     smoothTouch: false,
-  //   });
-
-  //   lenisRef.current = lenis;
-
-  //   // Create a request animation frame loop
-  //   const raf = (time) => {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   };
-
-  //   // Start the animation frame loop
-  //   requestAnimationFrame(raf);
-
-  //   // Clean up Lenis instance on component unmount
-  //   return () => {
-  //     lenis.destroy();
-  //   };
-  // }, []);
-
+function Home() {
   return (
-    <main>
+    <>
+      <Navbar />
+      <Hero />
+      <Featured />
       <Ecommerce />
-    </main>
-  );
+      <Customer />
+      <Footer />
+    </>
+  )
 }
+
+export default Home

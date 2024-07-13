@@ -1,3 +1,4 @@
+"use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
@@ -9,7 +10,6 @@ export function Navbar() {
   const [searchInput, setSearchInput] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
   const searchRef = useRef(null);
-  const searchlink = useRef(null);
 
   const handleSearch = (event) => {
     const value = event.target.value.toLowerCase();
@@ -37,7 +37,7 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 z-40 w-full bg-background">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="#" className="flex items-center gap-2" prefetch={false}>
+        <Link href="/" className="flex items-center gap-2" prefetch={false}>
           <MountainIcon className="h-6 w-6" />
           <span className="font-semibold hidden md:block">Acme Shop</span>
         </Link>
@@ -55,7 +55,7 @@ export function Navbar() {
               {filteredProducts.length > 0 ? (
                 filteredProducts.map((product) => (
                   <a href={"#" + product.id} key={product.id} className="p-4 block border-b last:border-none hover:bg-[#fff8f2]">
-                    <div prefetch={false} ref={searchlink} className="flex items-center gap-2">
+                    <div className="flex items-center gap-2">
                       <img src={product.image} alt={product.title} className="h-10 w-10 rounded-lg" />
                       <span className="ml-2">{product.title}</span>
                     </div>
@@ -70,28 +70,28 @@ export function Navbar() {
         <div className="flex gap-5">
           <nav className="hidden items-center gap-4 md:flex">
             <Link
-              href="#"
+              href="/"
               className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
               prefetch={false}
             >
               Home
             </Link>
             <Link
-              href="#"
+              href="/shop"
               className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
               prefetch={false}
             >
               Shop
             </Link>
             <Link
-              href="#"
+              href="/about"
               className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
               prefetch={false}
             >
               About
             </Link>
             <Link
-              href="#"
+              href="/contact"
               className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
               prefetch={false}
             >
@@ -117,28 +117,28 @@ export function Navbar() {
               <SheetContent side="right" className="w-full max-w-xs">
                 <div className="flex flex-col gap-4 p-4">
                   <Link
-                    href="#"
+                    href="/"
                     className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
                     prefetch={false}
                   >
                     Home
                   </Link>
                   <Link
-                    href="#"
+                    href="/shop"
                     className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
                     prefetch={false}
                   >
                     Shop
                   </Link>
                   <Link
-                    href="#"
+                    href="/about"
                     className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
                     prefetch={false}
                   >
                     About
                   </Link>
                   <Link
-                    href="#"
+                    href="/contact"
                     className="rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-muted hover:text-foreground"
                     prefetch={false}
                   >
@@ -184,7 +184,7 @@ function MountainIcon(props) {
       height="24"
       viewBox="0 0 24 24"
       fill="none"
-      stroke="currentColor"
+      stroke="#de772d"
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
