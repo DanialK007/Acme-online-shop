@@ -1,15 +1,26 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import {products} from "./data"
+// import {products} from "./data"
 import { ShoppingCard } from "./shopping-card"
 
 export function Ecommerce() {
+  const [products, setProducts] = useState([])
   const [selectedCategory, setSelectedCategory] = useState("All")
   const filteredProducts =
     selectedCategory === "All" ? products : products.filter((product) => product.category === selectedCategory)
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/products")
+     .then((response) => response.json())
+     .then((data) => {
+        setProducts(data);
+        console.log(data);
+      })
+      .catch((error) => console.error("Error fetching data:", error))
+  }, []);
 
   return (
     (
@@ -93,7 +104,7 @@ export function Ecommerce() {
                 //   </CardContent>
                 //   <div className="absolute -top-40" id={product.id}></div>
                 // </Card>
-                <ShoppingCard id={product.id} image={product.image} name={product.title} description={product.description} category={product.category} />
+                <ShoppingCard id={product.id} image={product.image} name={product.title} description={product.description} category={product.category} price={product.price} />
               ))}
             </div>
           </div>

@@ -5,6 +5,7 @@ const products = [
         title: "Air Max Sneakers",
         description: "Experience the ultimate comfort and style with our Air Max sneakers.",
         category: "Sneakers",
+        price: 150,
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const products = [
         title: "Denim Jacket",
         description: "Add a classic touch to your outfit with our stylish denim jackets.",
         category: "Jacket",
+        price: 80,
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ const products = [
         title: "Leather Jacket",
         description: "Stay warm and look cool with our premium leather jackets.",
         category: "Jacket",
+        price: 200,
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ const products = [
         title: "Chinos",
         description: "Versatile and comfortable, our chinos are perfect for any occasion.",
         category: "Pants",
+        price: 60,
     },
     {
         id: 5,
@@ -33,6 +37,7 @@ const products = [
         title: "Leather Belt",
         description: "Complete your outfit with our stylish leather belts.",
         category: "Accessories",
+        price: 30,
     },
     {
         id: 6,
@@ -40,6 +45,7 @@ const products = [
         title: "Bomber Jacket",
         description: "Add a touch of style to your wardrobe with our trendy bomber jackets.",
         category: "Jacket",
+        price: 100,
     },
     {
         id: 7,
@@ -47,6 +53,7 @@ const products = [
         title: "Cargo Pants",
         description: "Functional and fashionable, our cargo pants are a great addition to your wardrobe.",
         category: "Pants",
+        price: 70,
     },
     {
         id: 8,
@@ -54,6 +61,7 @@ const products = [
         title: "Chelsea Boots",
         description: "Step out in style with our elegant Chelsea boots.",
         category: "Sneakers",
+        price: 120,
     },
     {
         id: 9,
@@ -61,6 +69,7 @@ const products = [
         title: "Casual Sneakers",
         description: "Perfect for everyday wear, our casual sneakers offer comfort and style.",
         category: "Sneakers",
+        price: 90,
     },
     {
         id: 10,
@@ -68,6 +77,7 @@ const products = [
         title: "Running Sneakers",
         description: "Run with ease and comfort in our high-performance running sneakers.",
         category: "Sneakers",
+        price: 110,
     },
     {
         id: 11,
@@ -75,6 +85,7 @@ const products = [
         title: "Denim Jeans",
         description: "Our classic denim jeans are a must-have for any wardrobe.",
         category: "Pants",
+        price: 75,
     },
     {
         id: 12,
@@ -82,6 +93,7 @@ const products = [
         title: "Sunglasses",
         description: "Protect your eyes and look great with our stylish sunglasses.",
         category: "Accessories",
+        price: 50,
     },
     {
         id: 13,
@@ -89,6 +101,7 @@ const products = [
         title: "Puffer Jacket",
         description: "Stay warm and stylish with our insulated puffer jackets.",
         category: "Jacket",
+        price: 130,
     },
     {
         id: 14,
@@ -96,6 +109,7 @@ const products = [
         title: "Canvas Sneakers",
         description: "Our canvas sneakers are perfect for a casual, laid-back look.",
         category: "Sneakers",
+        price: 55,
     },
     {
         id: 15,
@@ -103,6 +117,7 @@ const products = [
         title: "Slim Fit Trousers",
         description: "Our slim fit trousers are perfect for a sharp and modern look.",
         category: "Pants",
+        price: 65,
     },
     {
         id: 16,
@@ -110,6 +125,7 @@ const products = [
         title: "Beanie",
         description: "Keep your head warm and stylish with our trendy beanies.",
         category: "Accessories",
+        price: 25,
     },
     {
         id: 17,
@@ -117,6 +133,7 @@ const products = [
         title: "Jogger Pants",
         description: "Stay comfortable and stylish with our jogger pants.",
         category: "Pants",
+        price: 55,
     },
     {
         id: 18,
@@ -124,6 +141,7 @@ const products = [
         title: "Trench Coat",
         description: "Stay stylish and protected from the elements with our trench coats.",
         category: "Jacket",
+        price: 140,
     },
     {
         id: 19,
@@ -131,6 +149,7 @@ const products = [
         title: "Corduroy Pants",
         description: "Add texture to your outfit with our stylish corduroy pants.",
         category: "Pants",
+        price: 70,
     },
     {
         id: 20,
@@ -138,6 +157,7 @@ const products = [
         title: "Watch",
         description: "Our watches are the perfect accessory for any outfit.",
         category: "Accessories",
+        price: 200,
     },
     {
         id: 21,
@@ -145,6 +165,7 @@ const products = [
         title: "Bomber Jacket",
         description: "Add a touch of style to your wardrobe with our trendy bomber jackets.",
         category: "Jacket",
+        price: 100,
     },
     {
         id: 22,
@@ -152,6 +173,7 @@ const products = [
         title: "Windbreaker Jacket",
         description: "Stay dry and look great with our lightweight windbreaker jackets.",
         category: "Jacket",
+        price: 85,
     },
     {
         id: 23,
@@ -159,9 +181,9 @@ const products = [
         title: "Cargo Pants",
         description: "Functional and fashionable, our cargo pants are a great addition to your wardrobe.",
         category: "Pants",
+        price: 75,
     }
 ];
-
 
 const testimonials = [
     {

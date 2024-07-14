@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-export function ShoppingCard({ id, image, category, name, description }) {
+export function ShoppingCard({ id, image, category, name, description, price }) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleFavoriteToggle = () => {
@@ -37,7 +37,7 @@ export function ShoppingCard({ id, image, category, name, description }) {
       <div className="p-4 md:p-6 flex flex-col h-full">
         <div className="flex items-center justify-between mb-2">
           <span className="text-sm text-muted-foreground">{category}</span>
-          <span className="text-lg font-bold">$49.99</span>
+          <span className="text-lg font-bold">{price}$</span>
         </div>
         <h3 className="text-xl font-bold mb-2">{name}</h3>
         <p className="text-muted-foreground mb-4">{description}</p>
