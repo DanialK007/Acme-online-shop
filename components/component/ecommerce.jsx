@@ -13,7 +13,7 @@ export function Ecommerce() {
     selectedCategory === "All" ? products : products.filter((product) => product.category === selectedCategory)
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/products")
+    fetch("https://acme-api-gm5e.onrender.com/api/products")
      .then((response) => response.json())
      .then((data) => {
         setProducts(data);
