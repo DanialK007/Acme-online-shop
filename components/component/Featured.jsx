@@ -48,7 +48,7 @@ function Featured() {
                 </div>
               </div>
               <img
-                src="https://elizabethanthonyhouston.com/cdn/shop/files/EMILIA_23949121-d032-4a79-8771-5b082e2bd78a.jpg?v=1686003912"
+                src="https://i5.walmartimages.com/seo/PMUYBHF-Floral-Dress-Women-Wedding-Petite-Long-Dresses-2024-Ladies-Fashion-Retro-Style-Tutu-Round-Sleeveless-White-Background-Black-Print-Womens-Tank_6719e6fc-7302-4e2a-8800-06bcff239a00.3af05abec29835aa7ab98972d5c88303.jpeg"
                 alt="Cover image"
                 width={300}
                 height={400}
